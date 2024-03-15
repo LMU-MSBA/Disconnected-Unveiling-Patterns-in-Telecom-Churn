@@ -9,7 +9,7 @@ What problem are you solving?
 How will you solve that problem?
 Explain how the project is inspired by a job post. Link to the job post saved as PDF in your repo.
 
-[Data analyst at Disney]([https://pages.github.com/](https://github.com/LMU-MSBA/Disconnected-Unveiling-Patterns-in-Telecom-Churn/blob/main/DISNEY_DATA_ANALYST.pdf)).
+[Data analyst at Disney](https://pages.github.com/](https://github.com/LMU-MSBA/Disconnected-Unveiling-Patterns-in-Telecom-Churn/blob/main/DISNEY_DATA_ANALYST.pdf/).
 
 
 Project Structure
