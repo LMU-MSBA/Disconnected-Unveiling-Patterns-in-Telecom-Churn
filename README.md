@@ -5,7 +5,11 @@ Project Description:
 Write a short paragraph answer the following:
 
 Who are you helping?
+
+
 What problem are you solving?
+We are aiming to help solve the customer churn rate problem by figuring out the main cause and identifying at-risk customers that would leave by the end of the month.
+
 How will you solve that problem?
 
 Explain how the project is inspired by a job post. Link to the job post saved as PDF in your repo.
