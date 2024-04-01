@@ -1,29 +1,32 @@
-# group-05
+# Disconnected: Unveiling Patterns in Telecom Churn
 
+### Project Description:
 
-Project Description:
-Write a short paragraph answer the following:
+This project aims to assist Disney in addressing their customer churn rate problem within the telecom industry. By understanding churn patterns and identifying at-risk customers poised to leave by month's end, we seek to mitigate the negative impact of customer turnover. Inspired by a job post focused on subscription bundle analysis, we leverage our expertise in bundle analysis to unveil churn patterns in telecom services. Our approach includes deploying Descriptive and Diagnostic Analytics Dashboards, an Automated Data Pipeline, and a Predictive Model to predict future churn rates and pinpoint at-risk customers proactively. [Link to job post PDF in repo](/docs/proposal/COMPANY_JOB_TITLE.pdf).
 
-Who are you helping?
+### Project Structure
 
+- `code`: Contains all code files necessary for the project, including dashboards, etl, features engineering, and predictive models.
+- `dashboards`: Tableau workbook files (.twbx) for Descriptive and Diagnostic Analytics Dashboards.
+- `data`: Organized data directories, including raw, interim, processed, and external datasets.
+- `docs`: Documentation related to the project, such as code overviews, requirements, data dictionaries, and the project proposal.
+- `models`: Documentation on the predictive model, including methodology and results.
+- `presentations`: PDFs of analyses and project milestones presentations.
 
-What problem are you solving?
-We are aiming to help solve the customer churn rate problem by figuring out the main cause and identifying at-risk customers that would leave by the end of the month.
+### Skills
 
-How will you solve that problem?
+- **Business/Problem Solving**: Understanding customer churn, analyzing subscription bundle impacts, strategic planning.
+- **Analytics**: Descriptive and diagnostic analysis, predictive modeling, statistical techniques.
+- **Technology**: SQL, Tableau, Python for machine learning, data pipeline automation.
 
-Explain how the project is inspired by a job post. Link to the job post saved as PDF in your repo.
-[Data analyst at Disney](https://github.com/LMU-MSBA/Disconnected-Unveiling-Patterns-in-Telecom-Churn/blob/main/DISNEY_DATA_ANALYST.pdf)
+### Analytics Maturity Scale
 
+- **Descriptive Analytics**: Current churn rate visualization and pattern identification.
+  - Deliverables: Descriptive Dashboard.
+- **Diagnostic Analytics**: Analysis of churn predictors through statistical techniques.
+  - Deliverables: Diagnostic Dashboard.
+- **Predictive Analytics**: Using historical data to forecast future churn rate.
+  - Deliverables: Predictive Model.
 
-Project Structure
-Explain the purpose of each directory (code, dashboards, data, docs, presentations, tests, etc.) and link to the directory. You do not have to explain the subdirectories.
+Link to GitHub Repository: [GitHub Repository Link]
 
-Skills
-List the skills used in the project for each of these categories:
-
-Business/Problem Solving
-Analytics
-Technology
-Analytics Maturity Scale
-Briefly explain each phase and list the project deliverables for each phase.
