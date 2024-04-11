@@ -13,16 +13,11 @@
 | **Churn is the prominent issue**                     | ✓           | ✓           |
 
 -   **Business Activity Category**
-    -   **Based on the Data Periodic Table**
-    -   **Can be more than one**
-    -   **Focus on one business area (sales, marketing, finance, accounting, HR, operations, IT, customer service, legal, etc.)**
     -   A06. Improved customer retention
     -   A10. Increased loyalty/customer satisfaction
     -   D04. Improved understanding of the impact of emerging customer behavior
     -   All of these focus in the customer service business area
 -   **OKR (Objectives and Key Results)**
-    -   **Objective / CRISP-DM's Business Objective / Data Periodic Table's Business Activity**
-    -   **SMART Key Results / CRISP-DM's Business Success Criteria**
     -   Objective: Reduce the monthly churn rate
     -   Key results:
         -   Decrease the monthly churn rate from 27% to 17% (i.e., 10%) within 6 months (around 1.67% reduction per month)
@@ -34,7 +29,6 @@
         -   Achieve 75% F1-score of the churn prediction model
             -   Justification: This KPI aims to successfully predict and identify churning consumers. By doing so, we’re able to take immediate actions toward the said customer and prevent them from churning.
 -   **OKR Initiatives**
-    -   **List the project’s deliverables**
     -   Develop and implement descriptive and diagnostic analytics dashboards.
     -   Establish an automated data pipeline
     -   Create and refine a predictive model for churn
@@ -88,7 +82,7 @@
 | Hours to complete the project                       | Total employee cost | Additional Comments                            |                |
 | 75                                                  | \$37,170            | Each employee spends 105 hours on this project |                |
 
--   **Benefits based on the Data Periodic Table's Business Activity Categories. Try to quantify as best as you can, i.e. for labor hours saved. If you cannot quantify the benefit, still identify the benefit.**
+-   **Benefits based on the Data Periodic Table's Business Activity Categories.
     -   Costs:
     -   Benefits: Reduction in customer churn, improved customer retention, and better resource allocation.
     -   *In Telecom’s latest month, 27% of customers churned. As a result, they lost out on \$139,130.85. If 17% would have churned instead of 27% (i.e., 10% less), then Telecom would have earned an additional \$13,913.09 in revenue. Considering the effort along with the project budget being \$37,170, the additional \$13,913.09 might not look like an attractive gain. However, the \$13,913.09 gain only reflects one month. By reducing consumer churn by 10%, the additional annual revenue would result in \$166,957.02. Thus, the ROI of this project is estimated to be a 3.5X after one year of implementation.*
@@ -113,6 +107,7 @@
 #### **Produce Project Plan**
 
 -   **Initial Assessment of Tools (Technology) and Techniques (Analytics)**
+    -   Excel, Tableau, Python
 -   **Data Toolkit Items**
     -   Dashboards, machine learning, and reports.
 -   **Project Plan**
