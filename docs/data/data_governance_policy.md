@@ -12,7 +12,7 @@ This project group is committed to ensuring the highest quality of data in our o
 Data security is paramount to protect sensitive information and maintain trust. Our security measures include:
 
 - Strict role-based access control (RBAC) to ensure that data is only accessible by authorized personnel.
-- Ensure that accessible and visualized data only displays non-identifiable data.
+- Apply least privilege access (LPA) to achieve a more granular level of data security.
 
 ## 3. Compliance
 
