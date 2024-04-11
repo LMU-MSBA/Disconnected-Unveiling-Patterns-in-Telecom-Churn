@@ -9,6 +9,10 @@ The dataset utilized in this analysis was acquired from Kaggle:
 
 [Telecom Company Churn Rate Call Center Data](https://www.kaggle.com/datasets/datazng/telecom-company-churn-rate-call-center-data)
 
+## Dataset Modification
+
+Within the dataset, we introduced a new column that tallies the number of services each customer is enrolled in.
+
 
 ## Contents
 
@@ -31,4 +35,4 @@ This dataset is valuable for:
 
 ## Format
 
-The dataset is provided in an CSV format.
+The dataset is provided in an Excel format.
