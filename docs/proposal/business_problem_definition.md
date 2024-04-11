@@ -96,7 +96,6 @@
 #### **Determine Data Mining Goals**
 
 -   **Data Mining Goals aka Enabling Activities aka Data Activities**
-    -   **Identify ALL relevant data activities from the Data Periodic Table**
     -   F02. Increased use of internal data
     -   F06. Improved quality of customer data
     -   F07. Increased use of structured data
