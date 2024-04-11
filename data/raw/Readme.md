@@ -4,6 +4,12 @@
 
 This dataset provides a comprehensive view of customer churn data for a telecommunications company. It includes various features of customer information, services availed, billing details, and support interactions.
 
+## Source
+The dataset utilized in this analysis was acquired from Kaggle:
+
+[Telecom Company Churn Rate Call Center Data](https://www.kaggle.com/datasets/datazng/telecom-company-churn-rate-call-center-data)
+
+
 ## Contents
 
 The data encompasses the following key areas:
@@ -20,9 +26,9 @@ This dataset is valuable for:
 
 - Analyzing customer behavior and identifying patterns that lead to churn.
 - Building predictive models to forecast customer retention.
-- Assessing the effectiveness of various services and support features in customer satisfaction and retention.
+- Track customer support inquiries over the past month
 - Informing customer segmentation and targeted marketing campaigns.
 
 ## Format
 
-The dataset is provided in an Excel format.
+The dataset is provided in an CSV format.
