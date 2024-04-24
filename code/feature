@@ -1,0 +1,85 @@
+# query to get the data, choosing the columns that are relevant for the analysis
+query = '''
+SELECT Churn, fc.bundleID, fc.contractID, dc.gender, dc.SeniorCitizen, dc.Partner, dc.Dependents, dc.tenure, MonthlyCharges 
+FROM FACT_CHURN fc
+JOIN DIM_CUSTOMER dc
+ON fc.customerID = dc.customerID;
+'''
+
+# reading the data
+df = pd.read_sql(query, aws_write)
+
+# checking the data
+df
+
+# checking data types
+def continuous_stats(df):
+    cont_features = df.select_dtypes(include=['int64', 'float64'])
+    stats = pd.DataFrame()
+    stats['Count'] = cont_features.count()
+    stats['% Miss.'] = cont_features.isnull().mean() * 100
+    stats['Card.'] = cont_features.nunique()
+    stats['Min'] = cont_features.min()
+    stats['1st Qrt.'] = cont_features.quantile(0.25)
+    stats['Mean'] = cont_features.mean()
+    stats['Median'] = cont_features.median()
+    stats['3rd Qrt.'] = cont_features.quantile(0.75)
+    stats['Max'] = cont_features.max()
+    stats['Std. Dev.'] = cont_features.std()
+    return stats
+
+
+def categorical_stats(df):
+    cate_features = df.select_dtypes(include=['object', 'category'])
+    stats = pd.DataFrame()
+    # Calculate the required statistics
+    stats['Count'] = cate_features.count()
+    stats['% Miss.'] = cate_features.isnull().mean() * 100
+    stats['Card.'] = cate_features.nunique()
+
+    # Mode and Mode Frequency
+    mode_df = cate_features.mode().iloc[0]
+    mode_freq = cate_features.apply(lambda x: (x == mode_df[x.name]).sum())
+    stats['Mode'] = mode_df
+    stats['Mode Freq.'] = mode_freq
+    stats['Mode %'] = 100 * mode_freq / cate_features.count()
+
+    # Second Mode and Second Mode Frequency
+    def second_mode(x):
+        if x.nunique() > 1: 
+            return x.value_counts().index[1], x.value_counts().iloc[1]
+        else: 
+            return None, 0
+    
+    second_modes = cate_features.apply(second_mode)
+    stats['2nd Mode'] = second_modes.apply(lambda x: x[0])
+    stats['2nd Mode Freq.'] = second_modes.apply(lambda x: x[1])
+    stats['2nd Mode %'] = 100 * stats['2nd Mode Freq.'] / cate_features.count()
+
+    
+    stats.fillna('-', inplace=True)
+
+    return stats
+
+
+categorical_report = categorical_stats(df)
+continuous_report = continuous_stats(df)
+
+
+
+print(f"Continuous Features")
+print(continuous_report)
+print(f"-----------------------------------------------------------------------------")
+print(f"-----------------------------------------------------------------------------")
+print(f"-----------------------------------------------------------------------------")
+print(f"Categorical Features")
+print(categorical_report)
+
+# splitting the data into training and testing sets
+x_train = df.drop('Churn', axis=1)
+y_train = df['Churn']
+x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size=0.2, random_state=42)
+
+# encoding dataset
+x_train = pd.get_dummies(x_train)
+x_test = pd.get_dummies(x_test)
