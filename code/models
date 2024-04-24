@@ -1,0 +1,108 @@
+# setting up lists of hyperparameters
+criteria = ['gini', 'entropy']
+min_samples_leaf1 = [5, 10, 15, 20, 25, 30, 35, 40]
+max_features1 = [None, 0.3 , 0.4, 0.5, 0.6, 0.7, 0.8]      
+max_depth1 = [2, 4, 6, 8, 10, 12, 14, 16]
+
+# run 1
+results1 = []
+for criterion in criteria:
+    model = DecisionTreeClassifier(criterion=criterion)
+    model.fit(x_train, y_train)
+    y_pred = model.predict(x_test)
+    accuracy = np.mean(y_test == y_pred)
+    results1.append(accuracy)
+
+print(f'Gini, Entropy: {results1}')
+print('--------------')
+print(max(results1))   # just making it easier to see the best accuracy
+
+# run 1 plot
+x = criteria  # X-axis points
+y = results1  # Y-axis points
+ 
+plt.plot(x, y)  # Plot the chart
+plt.title('Run 1')
+plt.xlabel('Criteria')
+plt.ylabel('Accuracy')
+plt.show() 
+
+# run 2
+results2 = []
+for min_samples_leaf in min_samples_leaf1:
+    model = DecisionTreeClassifier(min_samples_leaf=min_samples_leaf)
+    model.fit(x_train, y_train)
+    y_pred = model.predict(x_test)
+    accuracy = np.mean(y_test == y_pred)
+    results2.append(accuracy)
+
+print(results2)
+print('--------------')
+print(max(results2))
+
+# run 2 plot
+x = min_samples_leaf1  # X-axis points
+y = results2  # Y-axis points
+ 
+plt.plot(x, y)  # Plot the chart
+plt.title('Run 2')
+plt.xlabel('Min Samples Leaf')
+plt.ylabel('Accuracy')
+plt.show() 
+
+# run 3
+results3 = []
+for max_features in max_features1:
+    model = DecisionTreeClassifier(max_features=max_features, criterion = 'entropy', min_samples_leaf = 40)
+    model.fit(x_train, y_train)
+    y_pred = model.predict(x_test)
+    accuracy = np.mean(y_test == y_pred)
+    results3.append(accuracy)
+
+print(results3)
+print('--------------')
+print(max(results3))
+
+# run 3 plot
+x = max_features1  # X-axis points
+y = results3  # Y-axis points
+ 
+plt.plot(x, y)  # Plot the chart
+plt.title('Run 3')
+plt.xlabel('Max Features')
+plt.ylabel('Accuracy')
+plt.show() 
+
+# run 4
+results4 = []
+for max_depth in max_depth1:
+    model = DecisionTreeClassifier(max_features = 0.6, criterion = 'entropy', min_samples_leaf = 40, max_depth = max_depth)
+    model.fit(x_train, y_train)
+    y_pred = model.predict(x_test)
+    accuracy = np.mean(y_test == y_pred)
+    results4.append(accuracy)
+
+print(results4)
+print('--------------')
+print(max(results4))
+
+# run 4 plot
+x = max_depth1  # X-axis points
+y = results4  # Y-axis points
+ 
+plt.plot(x, y)  # Plot the chart
+plt.title('Run 4')
+plt.xlabel('Max Depth')
+plt.ylabel('Accuracy')
+plt.show() 
+
+# running model with best hyperparameters
+dtree_best = DecisionTreeClassifier(criterion='entropy', max_features = None, min_samples_leaf = 40, max_depth = 16)
+dtree_best.fit(x_train, y_train)
+y_pred_best = dtree_best.predict(x_test)
+
+# evaluation of best model
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
+RocCurveDisplay.from_estimator(model, x_test, y_test)
