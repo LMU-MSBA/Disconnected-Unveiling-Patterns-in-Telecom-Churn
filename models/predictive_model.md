@@ -17,7 +17,7 @@ This model is made to predict customer churn by identifying customers who are li
 
 **Output Interpretation**
 
-The model’s output is binary prediction where ‘No’ for customers predicted not to churn and ‘Yes’ for customers predicted to churn.
+The model’s output is binary prediction where ‘0’ for customers predicted not to churn and ‘1’ for customers predicted to churn.
 
 In the context of business problem, understanding who is likely to churn enables the business to take proactive measures to retain these those customers, maybe by addressing service issues.
 
