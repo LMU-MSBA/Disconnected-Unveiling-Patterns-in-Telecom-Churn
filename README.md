@@ -27,6 +27,3 @@ This project aims to assist Disney in addressing their customer churn rate probl
   - Deliverables: Diagnostic Dashboard.
 - **Predictive Analytics**: Using historical data to forecast future churn rate.
   - Deliverables: Predictive Model.
-
-Link to GitHub Repository: [GitHub Repository Link]
-
