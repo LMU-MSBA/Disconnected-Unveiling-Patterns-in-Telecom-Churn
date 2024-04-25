@@ -3,9 +3,11 @@ In the fast-evolving telecommunications industry, mastering data is essential fo
 ## Purpose
 This manifesto is our commitment to infusing data deeply into every aspect of what we do. It is an acknowledgment that data is the driving force in sculpting customer experiences and strategies that are not only reactive to current demands but proactive in foreseeing future trends. We stand by data as the key factor in our decisions, shaping an advantage that sets us apart in the noisy marketplace.
 ## Values
-### Curiosity
+- Curiosity
+
 We foster a relentless quest for data-driven truths that reveal deeper insights into our operations and customer needs.
-### Agility
+- Agility
+
 Our agility allows us to swiftly respond to data trends, adapting with the fluidity necessary for continuous industry leadership.
 ### Collaboration
 We promote a unified approach to data, fostering an environment where insights are shared, and knowledge is compounded, solidifying our collective intelligence.
