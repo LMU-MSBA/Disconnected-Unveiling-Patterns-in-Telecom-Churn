@@ -95,6 +95,6 @@ x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size=
 # encoding dataset
 label_encoder = LabelEncoder()
 y_train = label_encoder.fit_transform(y_train)
-y_test = label_encoder.fit_transform(y_test)
+y_test = label_encoder.transform(y_test)
 x_train = pd.get_dummies(x_train)
 x_test = pd.get_dummies(x_test)
