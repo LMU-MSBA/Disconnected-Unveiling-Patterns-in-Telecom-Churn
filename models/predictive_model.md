@@ -9,7 +9,7 @@ This model is made to predict customer churn by identifying customers who are li
 | bundleID       | A unique ID combination of services (322)                             |
 | contractID     | A unique ID combination of contract, billing, and payment method (24) |
 | numAdminTickets| Number of admin tickets |
-| numTechTickets | Number of tech tickets |
+| numTechTickets | Number of technological tickets |
 | gender         | Is customer is male or female                                                            |
 | SeniorCitizen  | If customer is a senior citizen or not (Yes or No)                                       |
 | Partner        | If customer has a partner or not (Yes or No)                                             |
