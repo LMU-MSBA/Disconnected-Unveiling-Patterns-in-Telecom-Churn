@@ -12,7 +12,7 @@ aws_write
 
 # query to get the data, choosing the columns that are relevant for the analysis
 query = '''
-SELECT Churn, fc.bundleID, fc.contractID, dc.gender, dc.SeniorCitizen, dc.Partner, dc.Dependents, dc.tenure, MonthlyCharges 
+SELECT Churn, fc.bundleID, numAdminTickets, numTechTickets, fc.contractID, dc.gender, dc.SeniorCitizen, dc.Partner, dc.Dependents, dc.tenure, MonthlyCharges 
 FROM FACT_CHURN fc
 JOIN DIM_CUSTOMER dc
 ON fc.customerID = dc.customerID;
