@@ -6,8 +6,8 @@ This model is made to predict customer churn by identifying customers who are li
 
 | Input Features | Description                                                                              |
 |----------------|------------------------------------------------------------------------------------------|
-| bundleID       | A concatenation of each unique combination of services (322)                             |
-| contractID     | A concatenation of each unique combination of contract, billing, and payment method (24) |
+| bundleID       | A unique ID combination of services (322)                             |
+| contractID     | A unique ID combination of contract, billing, and payment method (24) |
 | gender         | Is customer is male or female                                                            |
 | SeniorCitizen  | If customer is a senior citizen or not (Yes or No)                                       |
 | Partner        | If customer has a partner or not (Yes or No)                                             |
