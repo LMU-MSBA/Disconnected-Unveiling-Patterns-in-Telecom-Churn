@@ -4,7 +4,9 @@
 
 **Hypotheses**
 Based on data, we assume that reducing technical support tickets will lead to fewer customer churn. We further assume that educating our customers with a 4-minute educational video will lead to fewer technical support tickets. These assumptions led us to our null and alternative hypothesis.
+
 **H0:** Subscribers that viewed the video will not exhibit a significant difference in monthly churn rate compared to subscribers that did not view the video.
+
 **HA:** Subscribers that viewed the video will exhibit a significant difference in monthly churn rate compared to subscribers that did not view the video.
 
 **Experimental Design**
@@ -17,8 +19,11 @@ The experiment will last for 2 months.
 We plan to educate our users in the experimental group with a 4-minute educational video that explains (1) the most frequently asked technical questions and (2) how to avoid potential technical problems. Thus, our implementation plan is in the following order:
 * Hire an ad agency to produce a high quality 4-minute video. This will cost around $28,000.
 * Generate a new list inside of our CRM that tags all members in our experimental and control group (see example below).
+* 
 **User ID** **First Name** **Last Name** **Email** **Test Group** **Clicked Video**
+  
    352950	 	John 			Doe	   j.doe@gmail.com  Experimental  Yes
+  
    429519 		Jane			Doe	  jane.d@gmail.com  Control 	  N/A
 
 * Set up a 2-week email cadence. The initial email will send the educational video to members in the experimental group. If the customer does not open the email, or click the video, then the email cadence will automatically follow-up with them every 2 days.
