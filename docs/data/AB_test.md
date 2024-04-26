@@ -19,7 +19,7 @@ The experiment will last for 2 months.
 We plan to educate our users in the experimental group with a 4-minute educational video that explains (1) the most frequently asked technical questions and (2) how to avoid potential technical problems. Thus, our implementation plan is in the following order:
 * Hire an ad agency to produce a high quality 4-minute video. This will cost around $28,000.
 * Generate a new list inside of our CRM that tags all members in our experimental and control group (see example below).
-* 
+  
 **User ID** **First Name** **Last Name** **Email** **Test Group** **Clicked Video**
   
    352950	 	John 			Doe	   j.doe@gmail.com  Experimental  Yes
